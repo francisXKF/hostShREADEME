@@ -1,0 +1,23 @@
+### 主机监控脚本
+#### 功能
+主要实现对主机的存储空间、CPU使用率、内存、交换区使用情况的监控。
+#### 流程概要
+1. 远程服务器主机通过调用monitorHostInfo.py程序，将服务器主机上待监控的主机列表（hostIpRunInfo.txt）获取到当前主机上。
+2. monitorHostInfo.py程序通过多线程调用watchHost.sh脚本，对主机目前状况进行监控。
+3. watchHost.sh脚本会查询当前主机存储空间、CPU、内存、交换区情况，并将查询结果格式化输出到“主机IP.txt”中。
+4. 远程服务器主机通过调用monitorProcess.sh脚本，实时监控watchHost.sh是否执行完成。
+5. monitorProcess.sh脚本判定查询已全部完成后，调用uploadAns.py程序，将查询结果上传到远程服务器主机。
+#### 脚本说明
+* monitorHostInfo.py：获取待监控的主机列表文件，并一个主机对应一个线程调用watchHost.sh脚本进行主机监控。
+* watchHost.sh：查看主机CPU用户使用率；MEM、SWAP的总空间、已用空间；存储空间使用情况，其中，CPU、MEM、SWAP取样三次，MEM、SWAP空间大小以GB计算。该脚本将**最近10次**查询结果格式化输出到“主机IP.txt”中。
+* monitorProcess.sh：实时监控当前主机上是否有正在执行的watchHost.sh进程，当监测到watchHost.sh已完成后，将当前时间写入到flag_txt中，并调用uploadAns.py进行查询结果“主机IP.txt”上传。
+* uploadAns.py：使用processHostOp.py中的上传方法，进行结果上传。
+* processHostOp.py：已封装hostIpRunInfo.txt文件获取、“主机IP.txt”上传方法。在“hostIpRunInfo.txt文件获取”时，会读取processHostInfo，得到当前远程服务器主机IP等相关信息；在“主机IP.txt”上传时，会读取hostIpRunInfo.txt得到待上传文件列表。
+* hostIpRunInfo.txt：当前待监控查询的主机相关信息（IP、USERNAME、PASSWORD、MountedOn）。
+* processHostInfo：远程服务器主机相关信息（IP、USERNAME、PASSWORD、服务器主机hostIpRunInfo.txt文件路径、当前主机程序路径（未使用））。
+* flag_txt：记录每次查询完成时间。（原设计用于判断程序是否完成，后通过服务器java程序自行判断）
+* “主机IP.txt”：每个主机查询后格式化结果，保留最近十次记录。
+* util包：主要有python脚本ftp等已封装工具。
+* doc目录：存放watchHost.sh执行后，未格式化基础结果数据。
+#### 注意事项
+* monitorHostInfo.py、monitorProcess.sh、processHostOp.py程序中有**写死的basePath**，如果要进行程序迁移，需要对basePath进行相应修改。
