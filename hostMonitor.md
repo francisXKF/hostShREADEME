@@ -4,7 +4,7 @@
 #### 流程概要
 1. 远程服务器主机通过调用monitorHostInfo.py程序，将服务器主机上待监控的主机列表（hostIpRunInfo.txt）获取到当前主机上。
 2. monitorHostInfo.py程序通过多线程调用watchHost.sh脚本，对主机目前状况进行监控。
-3. watchHost.sh脚本会查询当前主机存储空间、CPU、内存、交换区情况，并将查询结果格式化输出到“主机IP.txt”中。
+3. watchHost.sh脚本会查询主机存储空间、CPU、内存、交换区情况，并将查询结果格式化输出到“主机IP.txt”中。
 4. 远程服务器主机通过调用monitorProcess.sh脚本，实时监控watchHost.sh是否执行完成。
 5. monitorProcess.sh脚本判定查询已全部完成后，调用uploadAns.py程序，将查询结果上传到远程服务器主机。
 #### 脚本说明
