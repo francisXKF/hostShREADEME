@@ -3,7 +3,7 @@
 日常监控脚本，主要监控文件采集、文件批价、文件下发、主机空间  
 [hostMonitor相关说明](https://github.com/francisXKF/hostShREADEME/blob/master/hostMonitor.md)
 ### 2. storageStatus
-主机空间监控脚本，监控各主机设定挂载点的空间、各主机时间查看、各主机内存使用情况
+主机空间监控脚本，监控各主机设定挂载点的空间、各主机时间查看、各主机内存使用情况  
 [挂载点空间检查viewStorageStatus.sh](https://github.com/francisXKF/hostShREADEME/blob/master/viewStorageStatus.md)
 ### 3. fileUpCheck
 文件上传监控脚本，主要监控各省分上传已采集文件数、未采集文件数
