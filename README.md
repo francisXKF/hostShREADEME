@@ -1,4 +1,4 @@
-# 国内漫游数据业务相关脚本使用说明
+# 相关脚本使用说明
 ### 1. autoMonitor
 日常监控脚本，主要监控文件采集、文件批价、文件下发、主机空间  
 [hostMonitor相关说明](https://github.com/francisXKF/hostShREADEME/blob/master/hostMonitor.md)
