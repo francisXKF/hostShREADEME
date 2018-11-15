@@ -7,10 +7,10 @@ React（16.0版本）实际使用
 Redux基础知识了解  
 Docker的基础使用
 
-### 单选：
-#### ES2015 * 4
+### 单选
+#### JS(ES2015) * 4
 1、
-```
+```js
 console.log(a);let a = 1;
 ```
 输出结果为：
@@ -19,7 +19,7 @@ A：1；B：0；C：undefined；D：异常：a is not defined
 答案：D
 
 2、
-```
+```js
 console.log(b);const b = 1;
 ```
 输出结果为：
@@ -28,7 +28,7 @@ A：1；B：0；C：undefined；D：异常：b is not defined
 答案：D
 
 3、
-```
+```js
 {
   var a = [];
   for (var i = 0; i < 10; i++) {
@@ -45,7 +45,7 @@ A: 0；B：6；C：10；D：undefined
 答案：C
 
 4、
-```
+```js
 {
   var a = [];
   for (let i = 0; i < 10; i++) {
@@ -127,7 +127,7 @@ D：ENV jdk.tar.gz /usr/local/
 答案：A
 
 ### 多选
-#### ES2015 * 2
+#### JS(ES2015) * 2
 1、
 在ES2015标准中，下面哪几项可以声明变量a并初始化值为1：  
 A：var a = 1 B：let a = 1 C：const a = 1 D a = 1
@@ -182,9 +182,9 @@ D：delete
 答案：ABC
 
 ### 判断
-#### ES2015 * 3
+#### JS(ES2015) * 3
 1、
-```
+```js
 const A = [];
 A.push("a");
 console.log(A[0]);
@@ -194,7 +194,7 @@ console.log(A[0]);
 答案：正确
 
 2、
-```
+```js
 const A = 'a';
 A = 'b';
 console.log(A);
@@ -240,8 +240,8 @@ componentWillUnmount
 #### React 中keys的作用是什么
 答：Keys 是 React 用于追踪哪些列表中元素被修改、被添加或者被移除的辅助标识。
 在开发过程中，我们需要保证某个元素的 key 在其同级元素中具有唯一性。在 React Diff 算法中 React 会借助元素的 Key 值来判断该元素是新近创建的还是被移动而来的元素，从而减少不必要的元素重渲染。此外，React 还需要借助 Key 值来判断元素与本地状态的关联关系，因此我们绝不可忽视转换函数中 Key 的重要性。
-#### ES2015下面代码输出结果是什么，请说明原因
-```
+#### JS(ES2015)下面代码输出结果是什么，请说明原因
+```js
 {
   var a = [];
   for (var i = 0; i < 10; i++) {
@@ -288,15 +288,15 @@ View要从多个来源获取数据
 
 ## 复习提纲与重点
 ### JS部分
-1、JS中var、let、const修饰变量的区别
-2、ES2015中箭头函数、扩展运算符等知识
-3、ES2015新增功能
+1、JS中var、let、const修饰变量的区别  
+2、ES2015中箭头函数、扩展运算符等知识  
+3、ES2015新增功能  
 
 ### React+Redux部分
-1、React组件的数据、父子组件传值
-2、React组件的生命周期
-3、Redux使用场景
+1、React组件的数据、父子组件传值  
+2、React组件的生命周期  
+3、Redux使用场景  
 
 ### Docker部分
-1、docker相关指令的使用
+1、docker相关指令的使用  
 2、docker在实际场景中的使用
