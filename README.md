@@ -14,7 +14,7 @@ Docker的基础使用
 console.log(a);let a = 1;
 ```
 输出结果为：
-A：1；B：0；C：undefined；D：异常：a is not defined
+A：1  B：0  C：undefined  D：异常：a is not defined
 
 答案：D
 
@@ -23,7 +23,7 @@ A：1；B：0；C：undefined；D：异常：a is not defined
 console.log(b);const b = 1;
 ```
 输出结果为：
-A：1；B：0；C：undefined；D：异常：b is not defined
+A：1  B：0  C：undefined  D：异常：b is not defined
 
 答案：D
 
@@ -63,31 +63,40 @@ A: 0；B：6；C：10；D：undefined
 
 #### React * 4
 1、  
-调用setState时，当前组件会触发下列哪个周期函数：
-A: componentWillMount B：componentDidMount
-C：shouldComponentUpdate D：componentWillReceiveProps
+调用setState时，当前组件会触发下列哪个周期函数：  
+A: componentWillMount  
+B：componentDidMount  
+C：shouldComponentUpdate  
+D：componentWillReceiveProps
 
 答案：C
 
 2、  
-React性能优化是下列哪个周期函数：
-A: componentWillMount B：componentDidMount
-C：shouldComponentUpdate D：componentDidUpdate
+React性能优化是下列哪个周期函数：  
+A: componentWillMount  
+B：componentDidMount  
+C：shouldComponentUpdate  
+D：componentDidUpdate
 
 答案：C
 
 3、  
-当父组件由于setState导致render函数被调用时，首先会触发子组件的哪个周期函数：
-A: componentWillMount B：componentDidMount
-C：shouldComponentUpdate D：componentWillReceiveProps
+当父组件由于setState导致render函数被调用时，首先会触发子组件的哪个周期函数：  
+A: componentWillMount  
+B：componentDidMount  
+C：shouldComponentUpdate  
+D：componentWillReceiveProps
 
 答案：D
 
 4、
-在React中，下列哪个周期函数内不适合调用setState：
-A: componentWillMount B：componentDidMount
-C：componentWillUpdate D：componentWillReceiveProps
+在React中，下列哪个周期函数内不适合调用setState：  
+A: componentWillMount  
+B：componentDidMount  
+C：componentWillUpdate  
+D：componentWillReceiveProps
 
+答案：C
 
 #### Docker * 4
 1、
@@ -130,7 +139,7 @@ D：ENV jdk.tar.gz /usr/local/
 #### JS(ES2015) * 2
 1、
 在ES2015标准中，下面哪几项可以声明变量a并初始化值为1：  
-A：var a = 1 B：let a = 1 C：const a = 1 D a = 1
+A：var a = 1  B：let a = 1  C：const a = 1  D：a = 1
 
 答案：ABCD
 
